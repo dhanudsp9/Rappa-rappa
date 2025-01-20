@@ -68,15 +68,15 @@ let turnX = true;
       btn.forEach((box, index) => {
         box.addEventListener("click", function () {
           soundb.play();
-          const img = document.createElement("img");
-          img.id = "imgg";
-          img.src = turnX ? "/src/Assets/RR-Axe.svg" : "/src/Assets/RR-Gun.svg"; 
-          console.log("Image source:", img.src);
-          img.style.width = "50px";
-          img.style.position = "absolute";
-          img.style.top = "50%";
-          img.style.left = "50%";
-          img.style.transform = "translate(-50%, -50%)";
+          const imgx = document.createElement("img");
+          imgx.id = "imgg";
+          imgx.src = turnX ? "/src/Assets/RR-Axe.svg" : "/src/Assets/RR-Gun.svg"; 
+         
+          imgx.style.width = "50px";
+          imgx.style.position = "absolute";
+          imgx.style.top = "50%";
+          imgx.style.left = "50%";
+          imgx.style.transform = "translate(-50%, -50%)";
           box.style.position = "relative";
           box.appendChild(img);
           box.disabled = true; 
@@ -84,7 +84,7 @@ let turnX = true;
           checkPatterns(); 
         });
       });
-
+ console.log("Image source:", imgx.src);
   
       const checkPatterns = () => {
         for (let pattern of winningPatterns) {
