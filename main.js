@@ -15,7 +15,7 @@ let turnX = true;
       let mainbg = document.querySelector("#Mainbgm");
       const contrbgm = document.createElement("img");
       contrbgm.id = "contrbgm";
-      contrbgm.src = "/Assets/RR-Mute.svg"; // Default to mute icon
+      contrbgm.src = "Assets/RR-Mute.svg"; // Default to mute icon
       contrbgm.style.width = "25px";
       contrbgm.style.position = "absolute";
       contrbgm.style.zIndex = 2;
@@ -28,11 +28,11 @@ let turnX = true;
         if (mainbg.paused) {
           mainbg.play();
           mainbg.volume = 0.02;
-          contrbgm.src = "/Assets/RR-Mute.svg";
+          contrbgm.src = "Assets/RR-Mute.svg";
          
         } else {
           mainbg.pause();
-          contrbgm.src = "/Assets/RR-Unmute.svg";
+          contrbgm.src = "Assets/RR-Unmute.svg";
           mainbg.volume = 0.01;
         }
       });
@@ -70,7 +70,7 @@ let turnX = true;
           soundb.play();
           const img = document.createElement("img");
           img.id = "imgg";
-          img.src = turnX ? "/Assets/RR-Axe.svg" : "/Assets/RR-Gun.svg"; // Choose image based on turn
+          img.src = turnX ? "Assets/RR-Axe.svg" : "Assets/RR-Gun.svg"; // Choose image based on turn
           img.style.width = "50px";
           img.style.position = "absolute";
           img.style.top = "50%";
@@ -98,13 +98,13 @@ let turnX = true;
             winnerIm.id="wonImgs"
     
             if (imgA.src.includes("Axe")) {
-              winnerIm.src = "/Assets/PUSHPA WON THE MATCH.svg";
+              winnerIm.src = "Assets/PUSHPA WON THE MATCH.svg";
               resultaxe.style.visibility ="visible"; 
               pushwon.currentTime = 0;
               pushwon.play();
               // Show Axe-specific overlay
             } else {
-              winnerIm.src = "/Assets/SHEKHAWAT WON THE MATCH.svg";
+              winnerIm.src = "Assets/SHEKHAWAT WON THE MATCH.svg";
               resultgun.style.visibility ="visible"; 
               sekhwon.currentTime = 0;
               sekhwon.play();// Show Gun-specific overlay
@@ -120,7 +120,7 @@ let turnX = true;
         if ([...btn].every((box) => box.querySelector("#imgg") !== null)) {
           const tieImage = document.createElement("img");
           tieImage.id="tieIm";
-          tieImage.src = "/Assets/RR_Tie.svg";
+          tieImage.src = "Assets/RR_Tie.svg";
           resultaxe.style.visibility="visible";
           resultgun.style.visibility="visible";
           tieImage.style.width ="50px";
