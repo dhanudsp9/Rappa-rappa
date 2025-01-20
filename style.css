@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+  }
+  .section1 {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    background-image: url('/Assets/RR-Main bgl.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  @media (max-width: 767px) {
+    .section1 {
+      flex-direction:column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .box-1{
+    width:50%;
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+  }
+  @media (max-width: 767px) {
+    .box-1{
+      width:100%;
+      height:50%;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+      gap:2px;
+    }
+  }
+  .Logo-container{
+  width:90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  }
+  .Logo-container img{
+  width:70%;
+  }
+  .box-container{
+  width:48%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  @media (max-width: 767px) {
+  .box-container{
+  width:70%;
+  height:auto;
+
+  }
+  }
+  .box-container img{
+  width:85px;
+  height:inherit;
+  }
+  @media (max-width: 767px) {
+  .box-container img{
+  width:65px;
+  height:auto;
+  }
+  }
+  .box-container #btn{
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border:none;
+  }
+  .box-container #rstbt img{
+  width:90px;
+  height:auto;
+  }
+  @media (max-width:767px) {
+  #rstbt img{
+  width:120px;
+  height:auto;
+  }
+  }
+  #rstbt {
+  width: fit-content;
+  height: fit-content;
+  background-color:transparent;
+  border:none;
+  }
+  .box-2{
+    width:50%;
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+  }
+  @media (max-width: 767px) {
+  .box-2{
+  width:100%;
+  height:50%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  gap:2px;
+  }
+  }
+  .result-board{
+  width:19.79rem;
+  height:24.56rem;
+  background-image:url('/Assets/RR-result board.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+  @media (max-width: 767px) {
+  .result-board{
+  width:12.8635rem;
+  height:15.964rem;
+  background-image:url('/Assets/RR-result board.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }}
+  #resultaxe{
+  width:auto;
+  position: absolute;
+  inset:158px 0px 6px 55px;
+  visibility:hidden;
+  }
+  @media (max-width: 767px) {
+  #resultaxe{
+  width:68px;
+  position: absolute;
+  inset: 103px 0px 4px 35px; 
+  visibility:hidden;
+  }
+  }
+  #resultgun{
+  width:auto;
+  position: absolute;
+  inset:132px 0px 0px 115px;
+  visibility: hidden;
+  
+  }
+  @media (max-width: 767px) {
+  #resultgun{
+  width:120px;
+  position: absolute;
+  inset: 85px 0px 0px 75px; 
+  visibility:hidden;
+  
+  }
+  .Logo-container img{
+  display:none;
+  }
+  }
+  #seclogo{
+  display:none;
+  width:70%;
+  position: absolute;
+  left:50%;
+  top:90%;
+  transform: translate(-50%,-50%);
+  }
+  @media (max-width: 767px) {
+  #seclogo{
+  display:block;
+  width:70%;
+  position: absolute;
+  left:50%;
+  top:90%;
+  transform: translate(-50%,-50%);
+  }}
+  .welpage{
+  width:100%;
+  height:100dvh;
+  background-image:url('/Assets/RR-Welbg.svg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  z-index:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .welcomeboard{
+  width:538px;
+  height:334.17px;
+  position: relative;
+  background-image:url('/Assets/RR-Welboard.svg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:30px;
+  }
+  @media (max-width: 767px) {
+  .welcomeboard{
+  width:312.04px;
+  height:193.62px;
+  position: relative;
+  background-image:url('/Assets/RR-Welboard.svg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  gap:12px;
+  
+  }
+  .welcomeboard img{
+  width:270px;
+  
+  }
+  .welcomeboard #captcha{
+  font-size:12px;
+  color:red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .welcomeboard #dabba{
+    width:200px;
+    height: auto;
+    background-color:transparent;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    outline:none;
+    color: aliceblue;
+    border-bottom:2px solid white;
+    font-size:10px;
+    } 
+    .welcomeboard .Btn{
+      width:70px;
+      height: 20px;
+      font-size:  10px;
+    }
+   #imgg{
+    width:auto;
+    height: 36px;
+    }
+    #wonImgs{
+      width:auto;
+      height: 40px;
+    }
+    #tieIm{
+      width:auto;
+      height: 50px; 
+    }
+  }
+  /* From Uiverse.io by vinodjangid07 */ 
+  .Btn {
+  width: 120px;
+  height: 35px;
+  border: none;
+  background: linear-gradient(to right,#925b1f,#ffd277,#DD903E,#764714,#ffd277,#d18c43);
+  background-size: 250%;
+  background-position: left;
+  position: relative;
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  }
+  
+  .Btn::before {
+  position: absolute;
+  content: "START";
+  font-weight: 500;
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  transition-duration: 1s;
+  background-color:black;
+  background-size: 200%;
+  }
+  
+  .Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+  }
+  
+  .Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+  }
+  
+  .Btn:active {
+  transform: scale(0.95);
+  }
+  #captcha{
+  font-size:20px;
+  color:red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #dabba{
+  width:400px;
+  height: auto;
+  background-color:transparent;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  outline:none;
+  color: aliceblue;
+  border-bottom:2px solid white;
+  } 
+ 
