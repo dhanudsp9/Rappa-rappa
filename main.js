@@ -1,5 +1,5 @@
 let turnX = true;
-      let btn = document.querySelectorAll(".image-button"); // Use a class selector for all buttons
+      let btn = document.querySelectorAll(".image-button"); 
       let rtbtn = document.querySelector("#rstbt");
       let resultBoard = document.querySelector(".result-board");
       let resultaxe =document.querySelector("#resultaxe");
@@ -15,24 +15,24 @@ let turnX = true;
       let mainbg = document.querySelector("#Mainbgm");
       const contrbgm = document.createElement("img");
       contrbgm.id = "contrbgm";
-      contrbgm.src = "/Assets/RR-Mute.svg"; // Default to mute icon
+      contrbgm.src = "/src/Assets/RR-Mute.svg"; 
       contrbgm.style.width = "25px";
       contrbgm.style.position = "absolute";
       contrbgm.style.zIndex = 2;
       contrbgm.style.top = "3%";
       contrbgm.style.right = "3%";
       
-      document.body.appendChild(contrbgm); // Append the button to the body
+      document.body.appendChild(contrbgm); 
       
       contrbgm.addEventListener("click", () => {
         if (mainbg.paused) {
           mainbg.play();
           mainbg.volume = 0.02;
-          contrbgm.src = "/Assets/RR-Mute.svg";
+          contrbgm.src = "/src/Assets/RR-Mute.svg";
          
         } else {
           mainbg.pause();
-          contrbgm.src = "/Assets/RR-Unmute.svg";
+          contrbgm.src = "/src/Assets/RR-Unmute.svg";
           mainbg.volume = 0.01;
         }
       });
@@ -70,7 +70,7 @@ let turnX = true;
           soundb.play();
           const img = document.createElement("img");
           img.id = "imgg";
-          img.src = turnX ? "/Assets/RR-Axe.svg" : "/Assets/RR-Gun.svg"; // Choose image based on turn
+          img.src = turnX ? "/src/Assets/RR-Axe.svg" : "/src/Assets/RR-Gun.svg"; 
           img.style.width = "50px";
           img.style.position = "absolute";
           img.style.top = "50%";
@@ -78,13 +78,13 @@ let turnX = true;
           img.style.transform = "translate(-50%, -50%)";
           box.style.position = "relative";
           box.appendChild(img);
-          box.disabled = true; // Disable button after it's clicked
-          turnX = !turnX; // Switch turn
-          checkPatterns(); // Check if there's a winner
+          box.disabled = true; 
+          turnX = !turnX; 
+          checkPatterns(); 
         });
       });
 
-      // Check for winning patterns
+  
       const checkPatterns = () => {
         for (let pattern of winningPatterns) {
           const [a, b, c] = pattern;
@@ -93,34 +93,34 @@ let turnX = true;
           const imgC = btn[c].querySelector("#imgg");
     
           if (imgA && imgB && imgC && imgA.src === imgB.src && imgB.src === imgC.src) {
-            // Create and show winner image on the result board
+           
             const winnerIm = document.createElement("img");
             winnerIm.id="wonImgs"
     
             if (imgA.src.includes("Axe")) {
-              winnerIm.src = "/Assets/PUSHPA WON THE MATCH.svg";
+              winnerIm.src = "/src/Assets/PUSHPA WON THE MATCH.svg";
               resultaxe.style.visibility ="visible"; 
               pushwon.currentTime = 0;
               pushwon.play();
-              // Show Axe-specific overlay
+           
             } else {
-              winnerIm.src = "/Assets/SHEKHAWAT WON THE MATCH.svg";
+              winnerIm.src = "/src/Assets/SHEKHAWAT WON THE MATCH.svg";
               resultgun.style.visibility ="visible"; 
               sekhwon.currentTime = 0;
-              sekhwon.play();// Show Gun-specific overlay
+              sekhwon.play();
             }
     
-            announceWinner(winnerIm); // Append the winner image to the result board
-            btn.forEach((box) => (box.disabled = true)); // Disable all buttons
+            announceWinner(winnerIm); 
+            btn.forEach((box) => (box.disabled = true)); 
             return;
           }
         }
     
-        // Check for a tie
+     
         if ([...btn].every((box) => box.querySelector("#imgg") !== null)) {
           const tieImage = document.createElement("img");
           tieImage.id="tieIm";
-          tieImage.src = "/Assets/RR_Tie.svg";
+          tieImage.src = "/src/Assets/RR_Tie.svg";
           resultaxe.style.visibility="visible";
           resultgun.style.visibility="visible";
           tieImage.style.width ="50px";
@@ -131,24 +131,24 @@ let turnX = true;
       };
     
         const announceWinner = (winnerImage) => {
-        // Style and append the winner image to the result board
+       
         winnerImage.style.width = "auto";
         winnerImage.style.position = "absolute";
         winnerImage.style.top = "22%";
         winnerImage.style.left = "50%";
         winnerImage.style.transform = "translate(-50%, -50%)";
-        resultBoard.appendChild(winnerImage); // Append to the result board
+        resultBoard.appendChild(winnerImage); 
       };
     
-      // Reset game logic
+
       rtbtn.addEventListener("click", () => {
         btn.forEach((box) => {
           const images = box.querySelectorAll("#imgg");
-          images.forEach((image) => image.remove()); // Remove gameplay images
-          box.disabled = false; // Re-enable buttons
+          images.forEach((image) => image.remove()); 
+          box.disabled = false; 
         });
     
-        turnX = true; // Reset turn
+        turnX = true; 
         soundb.play();
         resultaxe.style.visibility="hidden";
         resultgun.style.visibility="hidden";
