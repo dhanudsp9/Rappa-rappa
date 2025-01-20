@@ -71,6 +71,7 @@ let turnX = true;
           const img = document.createElement("img");
           img.id = "imgg";
           img.src = turnX ? "/src/Assets/RR-Axe.svg" : "/src/Assets/RR-Gun.svg"; 
+          console.log("Image source:", img.src);
           img.style.width = "50px";
           img.style.position = "absolute";
           img.style.top = "50%";
