@@ -15,7 +15,7 @@ let turnX = true;
       let mainbg = document.querySelector("#Mainbgm");
       const contrbgm = document.createElement("img");
       contrbgm.id = "contrbgm";
-      contrbgm.src = "/src/Assets/RR-Mute.svg"; 
+      contrbgm.src = "Assets/RR-Mute.svg"; 
       contrbgm.style.width = "25px";
       contrbgm.style.position = "absolute";
       contrbgm.style.zIndex = 2;
@@ -28,11 +28,11 @@ let turnX = true;
         if (mainbg.paused) {
           mainbg.play();
           mainbg.volume = 0.02;
-          contrbgm.src = "/src/Assets/RR-Mute.svg";
+          contrbgm.src = "Assets/RR-Mute.svg";
          
         } else {
           mainbg.pause();
-          contrbgm.src = "/src/Assets/RR-Unmute.svg";
+          contrbgm.src = "Assets/RR-Unmute.svg";
           mainbg.volume = 0.01;
         }
       });
@@ -68,15 +68,15 @@ let turnX = true;
       btn.forEach((box, index) => {
         box.addEventListener("click", function () {
           soundb.play();
-          const imgx = document.createElement("img");
-          imgx.id = "imgg";
-          imgx.src = turnX ? "/src/Assets/RR-Axe.svg" : "/src/Assets/RR-Gun.svg"; 
+          const img = document.createElement("img");
+          img.id = "imgg";
+          img.src = turnX ? "Assets/RR-Axe.svg" : "Assets/RR-Gun.svg"; 
          
-          imgx.style.width = "50px";
-          imgx.style.position = "absolute";
-          imgx.style.top = "50%";
-          imgx.style.left = "50%";
-          imgx.style.transform = "translate(-50%, -50%)";
+          img.style.width = "50px";
+          img.style.position = "absolute";
+          img.style.top = "50%";
+          img.style.left = "50%";
+          img.style.transform = "translate(-50%, -50%)";
           box.style.position = "relative";
           box.appendChild(img);
           box.disabled = true; 
@@ -84,7 +84,7 @@ let turnX = true;
           checkPatterns(); 
         });
       });
- console.log("Image source:", imgx.src);
+
   
       const checkPatterns = () => {
         for (let pattern of winningPatterns) {
@@ -99,13 +99,13 @@ let turnX = true;
             winnerIm.id="wonImgs"
     
             if (imgA.src.includes("Axe")) {
-              winnerIm.src = "/src/Assets/PUSHPA WON THE MATCH.svg";
+              winnerIm.src = "Assets/PUSHPA WON THE MATCH.svg";
               resultaxe.style.visibility ="visible"; 
               pushwon.currentTime = 0;
               pushwon.play();
            
             } else {
-              winnerIm.src = "/src/Assets/SHEKHAWAT WON THE MATCH.svg";
+              winnerIm.src = "Assets/SHEKHAWAT WON THE MATCH.svg";
               resultgun.style.visibility ="visible"; 
               sekhwon.currentTime = 0;
               sekhwon.play();
@@ -121,7 +121,7 @@ let turnX = true;
         if ([...btn].every((box) => box.querySelector("#imgg") !== null)) {
           const tieImage = document.createElement("img");
           tieImage.id="tieIm";
-          tieImage.src = "/src/Assets/RR_Tie.svg";
+          tieImage.src = "Assets/RR_Tie.svg";
           resultaxe.style.visibility="visible";
           resultgun.style.visibility="visible";
           tieImage.style.width ="50px";
