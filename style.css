@@ -14,7 +14,7 @@
     height: 100dvh;
     display: flex;
     flex-direction: row;
-    background-image: url('/Assets/RR-Main bgl.jpg');
+    background-image: url('Assets/RR-Main bgl.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -126,7 +126,7 @@
   .result-board{
   width:19.79rem;
   height:24.56rem;
-  background-image:url('/Assets/RR-result board.svg');
+  background-image:url('Assets/RR-result board.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,7 +136,7 @@
   .result-board{
   width:12.8635rem;
   height:15.964rem;
-  background-image:url('/Assets/RR-result board.svg');
+  background-image:url('Assets/RR-result board.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -195,7 +195,7 @@
   .welpage{
   width:100%;
   height:100dvh;
-  background-image:url('/Assets/RR-Welbg.svg');
+  background-image:url('Assets/RR-Welbg.svg');
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -210,7 +210,7 @@
   width:538px;
   height:334.17px;
   position: relative;
-  background-image:url('/Assets/RR-Welboard.svg');
+  background-image:url('Assets/RR-Welboard.svg');
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,7 +225,7 @@
   width:312.04px;
   height:193.62px;
   position: relative;
-  background-image:url('/Assets/RR-Welboard.svg');
+  background-image:url('Assets/RR-Welboard.svg');
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
